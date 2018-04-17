@@ -1,0 +1,12 @@
+apiVersion: packaging.k8s.io/v1alpha1
+kind: Kit
+metadata:
+  name: coredns
+  namespace: kube-system
+spec:
+  bases:
+  - coredns-base
+  patches:
+  - source: coredns-kops
+  - source: coredns-user
+    optional: true

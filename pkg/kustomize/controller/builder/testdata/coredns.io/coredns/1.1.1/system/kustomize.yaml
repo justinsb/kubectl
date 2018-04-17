@@ -1,0 +1,4 @@
+bases:
+  - ../
+patches:
+  - service.yaml

@@ -1,0 +1,12 @@
+apiVersion: packaging.k8s.io/v1alpha1
+kind: Patchset
+spec:
+  patches:
+  - patch:
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: coredns
+        namespace: kube-system
+      spec:
+        clusterIP: 100.64.0.10
